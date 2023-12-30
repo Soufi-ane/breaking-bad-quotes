@@ -9,6 +9,11 @@ export default function App() {
   const [error, setError] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 
+  useEffect(function () {
+    document.addEventListener("right-click", function (e) {
+      e.preventDefault();
+    });
+  }, []);
   useEffect(
     function () {
       async function getQuotes() {
@@ -19,7 +24,11 @@ export default function App() {
 
           let quotes = await res.json();
           setIsLoading(false);
-          if (quotes[0].author === "Walter White") UpdateImage(images.walter);
+          if (quotes[0].author === "Walter White")
+            throw new Error(
+              "cannot locate file in node_modules  %PULIC FILES Error : js:139"
+            );
+          // UpdateImage(images.walter) ;
           else if (quotes[0].author === "Hank Schrader")
             UpdateImage(images.hank);
           else if (quotes[0].author === "Jesse Pinkman")
@@ -61,10 +70,14 @@ export default function App() {
           ></div>
           {isLoading ? (
             <Loading h={600}>
-              <div className="spinner"></div>
+              <div className="sp-div">
+                <div className="spinner"></div>
+              </div>
             </Loading>
           ) : (
-            <img src={src} alt="breaking bad" />
+            <div className="image" style={{ backgroundImage: `url(${src})` }}>
+              {""}
+            </div>
           )}
           <div className="text">
             {isLoading ? (
@@ -82,13 +95,20 @@ export default function App() {
           </div>
         </>
       )}
-      <button onClick={HandleClick}>Random quote</button>
+      <button onClick={HandleClick}>
+        {error ? "Try again" : "Random quote"}
+      </button>
     </div>
   );
 }
 
 function ErrorMessage({ err }) {
-  return <p className="error">{err.message}</p>;
+  return (
+    <div className="error-div">
+      <p id="err">Something went wrong , here is the error message :</p>
+      <div className="error">{err.message}</div>
+    </div>
+  );
 }
 function Loading({ children, h = 100 }) {
   return (
