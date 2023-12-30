@@ -24,11 +24,7 @@ export default function App() {
 
           let quotes = await res.json();
           setIsLoading(false);
-          if (quotes[0].author === "Walter White")
-            throw new Error(
-              "cannot locate file in node_modules  %PULIC FILES Error : js:139"
-            );
-          // UpdateImage(images.walter) ;
+          if (quotes[0].author === "Walter White") UpdateImage(images.walter);
           else if (quotes[0].author === "Hank Schrader")
             UpdateImage(images.hank);
           else if (quotes[0].author === "Jesse Pinkman")
