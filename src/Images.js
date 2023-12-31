@@ -1,14 +1,14 @@
 const images = {
   walter: [
     "https://m.media-amazon.com/images/M/MV5BNTA5MzYxMDExNV5BMl5BanBnXkFtZTgwNzgxMTU5NTM@._V1_FMjpg_UX1000_.jpg",
-    "https://m.media-amazon.com/images/M/MV5BMTU1MjEwNjQ4MF5BMl5BanBnXkFtZTgwNzI2MTU5NTM@._V1_FMjpg_UX1000_.jpg",
-    "https://m.media-amazon.com/images/M/MV5BMTQ3OTAwMTQzNl5BMl5BanBnXkFtZTgwMDQxMjUzMDE@._V1_FMjpg_UX1000_.jpg",
+    "img/14.jpg",
     "https://m.media-amazon.com/images/M/MV5BMjE1OTMwNTA5NV5BMl5BanBnXkFtZTgwMDkzOTA1NjM@._V1_FMjpg_UX1000_.jpg",
     "https://m.media-amazon.com/images/M/MV5BMzQwODMxOTg5MF5BMl5BanBnXkFtZTgwNjQ2MTU5NTM@._V1_FMjpg_UX2048_.jpg",
     "img/3.jpg",
+    "https://m.media-amazon.com/images/M/MV5BMTU1MjEwNjQ4MF5BMl5BanBnXkFtZTgwNzI2MTU5NTM@._V1_FMjpg_UX1000_.jpg",
     "img/7.jpg",
+    "https://m.media-amazon.com/images/M/MV5BMTQ3OTAwMTQzNl5BMl5BanBnXkFtZTgwMDQxMjUzMDE@._V1_FMjpg_UX1000_.jpg",
     "img/13.jpg",
-    "img/14.jpg",
   ],
   jesse: [
     "https://m.media-amazon.com/images/M/MV5BMTU3NDkxODQyN15BMl5BanBnXkFtZTgwMjc2MDU5NTM@._V1_FMjpg_UX1000_.jpg",
