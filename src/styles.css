@@ -46,6 +46,7 @@ body {
   position: absolute;
   background: black;
   z-index: 99;
+  overflow: hidden;
 }
 .container {
   filter: blur(10px);
